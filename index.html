@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+ 
+<style>
+table, th, tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+ 
+</head>
+ 
+<body>
+<p>Patient: <input type="text" value="abc"> </p>
+<p>ID Number: <input type="text" value="abc"> </p>
+<p>Birthday: <input type="date" name="bday"></p> 
+<p>Referring physician: <input type="text" value="abc"> </p>
+<p>Date of exam: <span id='now'></span> </p>
+<p>Sonographer's supervisor: <input type="text" value="abc"></p>
+<p>Indication for scan: <br><textarea rows="2" cols="50">
+</textarea></p>
+<p>LMP: <input type="date" name="bday"></p> 
+<p>Technical conditions: <input type="radio" value="A" name="choice">
+   Good<input type="radio" value="B" name="choice" checked>
+   Limited by: <input type="text" value="abc"></p>
+<p>Number of fetuses: <input type="radio" value="A" name="choice">
+   Singleton<input type="radio" value="B" name="choice" checked>
+   Multiple: </p>
+<p id="chorionicity"><label>chorionicity: </label>
+<select >
+    <option>Dichorionic, Diamniotic</option>
+    <option>Monochorionic, Monoamniotic</option>
+    <option>Dichorionic, Monoamniotic</option>
+</select></p>
+<p>Adnexa: Appearance
+<input type="checkbox" checked="true"> normal
+<input type="checkbox" > abnormal*:
+<textarea hidden>abnormality description</textarea>
+</p>
+<p>Scan image: <input type="file"></p>
+<p>Enter OMVIAL password: <input type="password" value="abc">
+<table style="width:100%">
+  <caption>Fetal Biometry</caption>
+  <tr>
+    <th>MEASUREMENTS</th>
+    <th>mm</th>
+    <th>Centile (Referene range)</th>
+  </tr>
+  <tr>
+    <td>Crown-rump length</td>
+    <td><input></td>
+    <td><input></td>
+  </tr>
+  <tr>
+    <td>Nuchal translucency (optional)</td>
+    <td><input></td>
+    <td><input></td>
+  </tr>
+    <tr>
+    <td>Biparietal diameter</td>
+    <td><input></td>
+    <td><input></td>
+  </tr>
+    <tr>
+    <td>Head circumference</td>
+    <td><input></td>
+    <td><input></td>
+  </tr>
+  <tr>
+    <td>Abdominal circumference</td>
+    <td><input></td>
+    <td><input></td>
+  </tr>
+    <tr>
+    <td>Femoral diaphysis length</td>
+    <td><input></td>
+    <td><input></td>
+  </tr>
+</table>
+<br>
+
+<h3>Ultrasound-based Estimate of GA: <input size="4" maxlength="2"> 
+weeks, <input size="4" maxlength="1"> days</h3>
+
+CONCLUSION:<br>
+<p><select>
+  <option>Normal and complete examination</option>
+  <option>Normal but incomplete examination</option>
+  <option>Abnormal examination</option>
+</select></p>
+
+Plan:<br>
+<p><select>
+  <option>No further ultrasound scan required</option>
+  <option>Follow up planned in 1-2 weeks</option>
+  <option>Refer to Obstetrician/Gynaecologists</option>
+</select></p>
+
+<script type="text/javascript">
+document.getElementById("now").innerHTML = new Date();
+document.getElementById("chorionicity").hiden = true;
+</script>
+</body>
+ 
+</html>
